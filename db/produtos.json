@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nome": "Notebook Gamer",
+    "descricao": "Notebook i7 16GB RAM",
+    "preco": 3500.0,
+    "estoque_atual": 12,
+    "estoque_minimo": 1,
+    "categoria": "Eletrônicos",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "nome": "Mouse Pad",
+    "descricao": "Mouse Pad Grande",
+    "preco": 25.0,
+    "estoque_atual": 2,
+    "estoque_minimo": 5,
+    "categoria": "Geral",
+    "ativo": true
+  }
+]

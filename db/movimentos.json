@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "produto_id": 1,
+    "tipo": "entrada",
+    "quantidade": 10,
+    "data": "2025-10-16T16:15:35.845856",
+    "observacao": "Compra do fornecedor"
+  },
+  {
+    "id": 2,
+    "produto_id": 1,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-10-16T16:15:35.850281",
+    "observacao": "Venda"
+  },
+  {
+    "id": 3,
+    "produto_id": 1,
+    "tipo": "entrada",
+    "quantidade": 10,
+    "data": "2025-10-16T16:23:13.733737",
+    "observacao": "Compra do fornecedor"
+  },
+  {
+    "id": 4,
+    "produto_id": 1,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-10-16T16:23:13.735294",
+    "observacao": "Venda"
+  },
+  {
+    "id": 5,
+    "produto_id": 3,
+    "tipo": "entrada",
+    "quantidade": 5,
+    "data": "2025-10-16T16:25:31.003645",
+    "observacao": "0"
+  },
+  {
+    "id": 6,
+    "produto_id": 3,
+    "tipo": "saida",
+    "quantidade": 8,
+    "data": "2025-10-16T16:25:46.755682",
+    "observacao": "Venda"
+  },
+  {
+    "id": 7,
+    "produto_id": 1,
+    "tipo": "entrada",
+    "quantidade": 10,
+    "data": "2025-10-16T16:38:31.810714",
+    "observacao": "Compra do fornecedor"
+  },
+  {
+    "id": 8,
+    "produto_id": 1,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-10-16T16:38:31.812736",
+    "observacao": "Venda"
+  },
+  {
+    "id": 9,
+    "produto_id": 1,
+    "tipo": "entrada",
+    "quantidade": 10,
+    "data": "2025-10-16T17:00:14.767989",
+    "observacao": "Compra do fornecedor"
+  },
+  {
+    "id": 10,
+    "produto_id": 1,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-10-16T17:00:14.769100",
+    "observacao": "Venda"
+  },
+  {
+    "id": 11,
+    "produto_id": 1,
+    "tipo": "entrada",
+    "quantidade": 10,
+    "data": "2025-10-26T15:10:32.682302",
+    "observacao": "Compra do fornecedor"
+  },
+  {
+    "id": 12,
+    "produto_id": 1,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-10-26T15:10:32.684680",
+    "observacao": "Venda"
+  }
+]
