@@ -18,15 +18,5 @@
     "estoque_minimo": 5,
     "categoria": "Geral",
     "ativo": true
-  },
-  {
-    "id": 3,
-    "nome": "Headset Phillips",
-    "descricao": "Fone de ouvido",
-    "preco": 120.0,
-    "estoque_atual": 10,
-    "estoque_minimo": 3,
-    "categoria": "Eletrônicos",
-    "ativo": true
   }
 ]
