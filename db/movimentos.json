@@ -126,5 +126,37 @@
     "quantidade": 3,
     "data": "2025-10-26T17:06:40.909397",
     "observacao": "Venda"
+  },
+  {
+    "id": 17,
+    "produto_id": 4,
+    "tipo": "entrada",
+    "quantidade": 5,
+    "data": "2025-10-26T17:22:26.140022",
+    "observacao": "Entrada no estoque"
+  },
+  {
+    "id": 18,
+    "produto_id": 5,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-10-26T17:22:43.291136",
+    "observacao": "Venda"
+  },
+  {
+    "id": 19,
+    "produto_id": 1,
+    "tipo": "entrada",
+    "quantidade": 10,
+    "data": "2025-10-26T17:23:32.666957",
+    "observacao": "Compra do fornecedor"
+  },
+  {
+    "id": 20,
+    "produto_id": 1,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-10-26T17:23:32.668651",
+    "observacao": "Venda"
   }
 ]
