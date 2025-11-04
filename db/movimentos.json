@@ -174,5 +174,21 @@
     "quantidade": 3,
     "data": "2025-11-04T18:05:09.206056",
     "observacao": "Venda"
+  },
+  {
+    "id": 23,
+    "produto_id": 2,
+    "tipo": "entrada",
+    "quantidade": 3,
+    "data": "2025-11-04T18:18:18.667688",
+    "observacao": "Entrada no estoque"
+  },
+  {
+    "id": 24,
+    "produto_id": 3,
+    "tipo": "saida",
+    "quantidade": 6,
+    "data": "2025-11-04T18:19:07.903371",
+    "observacao": "Venda"
   }
 ]

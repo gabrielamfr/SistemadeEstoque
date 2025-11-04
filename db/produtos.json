@@ -14,6 +14,16 @@
     "nome": "Mouse Pad",
     "descricao": "Mouse Pad Grande",
     "preco": 25.0,
+    "estoque_atual": 5,
+    "estoque_minimo": 5,
+    "categoria": "Geral",
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "nome": "Tablet",
+    "descricao": "",
+    "preco": 1000.0,
     "estoque_atual": 2,
     "estoque_minimo": 5,
     "categoria": "Geral",
