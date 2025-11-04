@@ -79,23 +79,47 @@ class SistemaEstoque:
         return [produto for produto in self.produtos if produto.ativo]
     
     def carregar_dados(self):
-        try:
-            if os.path.exists('produtos.json'):
-                with open('produtos.json', 'r', encoding='utf-8') as f:
-                    dados = json.load(f)
-                    self.produtos = [Produto.from_dict(produto) for produto in dados]
-                    if self.produtos:
-                        self.proximo_id_produto = max(p.id for p in self.produtos) + 1
-            
-            if os.path.exists('movimentos.json'):
-                with open('movimentos.json', 'r', encoding='utf-8') as f:
-                    dados = json.load(f)
-                    self.movimentos = [MovimentoEstoque.from_dict(mov) for mov in dados]
-                    if self.movimentos:
-                        self.proximo_id_movimento = max(m.id for m in self.movimentos) + 1
-        except Exception as e:
-            print(f"Erro ao carregar dados: {e}")
-    
+         try:
+            print("Carregando dados do banco JSON...")
+            path_produtos = "db/produtos.json"
+            path_movimentos = "db/movimentos.json"
+            if os.path.exists(path_produtos):
+                with open(path_produtos, "r", encoding="utf-8") as f:
+                    try:
+                        dados = json.load(f)
+                        self.produtos = [Produto.from_dict(p) for p in dados]
+                        print(f"Produtos carregados: {len(self.produtos)}")
+
+                        if self.produtos:
+                           self.proximo_id_produto = max(p.id for p in self.produtos) + 1
+                        for p in self.produtos:
+                            print(f" - {p.id}: {p.nome} (Estoque: {p.estoque_atual})")
+
+                    except Exception as e:
+                       print("Erro ao ler produtos.json:", e)
+            else:
+                print("Arquivo produtos.json NÃO encontrado!")
+            if os.path.exists(path_movimentos):
+                with open(path_movimentos, "r", encoding="utf-8") as f:
+                    try:
+                        dados = json.load(f)
+                        self.movimentos = [MovimentoEstoque.from_dict(m) for m in dados]
+                        print(f"Movimentos carregados: {len(self.movimentos)}")
+
+                        if self.movimentos:
+                          self.proximo_id_movimento = max(m.id for m in self.movimentos) + 1
+                        for m in self.movimentos:
+                          print(f" - Movimento {m.id}: {m.tipo.value} {m.quantidade}")
+
+                    except Exception as e:
+                      print("Erro ao ler movimentos.json:", e)
+            else:
+                print("Arquivo movimentos.json NÃO encontrado!")
+
+            print("Carregamento concluído!")
+
+         except Exception as e:
+          print("ERRO GERAL NO CARREGAMENTO:", e)
     def salvar_dados(self):
         try:
             os.makedirs('db', exist_ok=True)
