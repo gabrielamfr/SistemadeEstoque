@@ -1,8 +1,8 @@
 import json
 import os
 from datetime import datetime
-from .produto import Produto
-from .movimento import MovimentoEstoque, TipoMovimento
+from package.produto import Produto
+from package.movimento import MovimentoEstoque, TipoMovimento
 
 class SistemaEstoque:
     def __init__(self):
@@ -80,15 +80,15 @@ class SistemaEstoque:
     
     def carregar_dados(self):
         try:
-            if os.path.exists('db/produtos.json'):
-                with open('db/produtos.json', 'r', encoding='utf-8') as f:
+            if os.path.exists('produtos.json'):
+                with open('produtos.json', 'r', encoding='utf-8') as f:
                     dados = json.load(f)
                     self.produtos = [Produto.from_dict(produto) for produto in dados]
                     if self.produtos:
                         self.proximo_id_produto = max(p.id for p in self.produtos) + 1
             
-            if os.path.exists('db/movimentos.json'):
-                with open('db/movimentos.json', 'r', encoding='utf-8') as f:
+            if os.path.exists('movimentos.json'):
+                with open('movimentos.json', 'r', encoding='utf-8') as f:
                     dados = json.load(f)
                     self.movimentos = [MovimentoEstoque.from_dict(mov) for mov in dados]
                     if self.movimentos:
@@ -100,9 +100,9 @@ class SistemaEstoque:
         try:
             os.makedirs('db', exist_ok=True)
             
-            with open('db/produtos.json', 'w', encoding='utf-8') as f:
+            with open('produtos.json', 'w', encoding='utf-8') as f:
                 json.dump([produto.to_dict() for produto in self.produtos], f, indent=2, ensure_ascii=False)
-            with open('db/movimentos.json', 'w', encoding='utf-8') as f:
+            with open('movimentos.json', 'w', encoding='utf-8') as f:
                 json.dump([movimento.to_dict() for movimento in self.movimentos], f, indent=2, ensure_ascii=False)
         except Exception as e:
             print(f"Erro ao salvar dados: {e}")
