@@ -158,5 +158,21 @@
     "quantidade": 3,
     "data": "2025-10-26T17:23:32.668651",
     "observacao": "Venda"
+  },
+  {
+    "id": 21,
+    "produto_id": 1,
+    "tipo": "entrada",
+    "quantidade": 10,
+    "data": "2025-11-04T18:05:09.206056",
+    "observacao": "Compra do fornecedor"
+  },
+  {
+    "id": 22,
+    "produto_id": 1,
+    "tipo": "saida",
+    "quantidade": 3,
+    "data": "2025-11-04T18:05:09.206056",
+    "observacao": "Venda"
   }
 ]

@@ -18,25 +18,5 @@
     "estoque_minimo": 5,
     "categoria": "Geral",
     "ativo": true
-  },
-  {
-    "id": 3,
-    "nome": "fone de ouvido",
-    "descricao": "",
-    "preco": 100.0,
-    "estoque_atual": 10,
-    "estoque_minimo": 3,
-    "categoria": "eletrônicos",
-    "ativo": true
-  },
-  {
-    "id": 4,
-    "nome": "Carregador",
-    "descricao": "",
-    "preco": 20.0,
-    "estoque_atual": 5,
-    "estoque_minimo": 3,
-    "categoria": "Geral",
-    "ativo": true
   }
 ]
