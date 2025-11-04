@@ -124,9 +124,9 @@ class SistemaEstoque:
         try:
             os.makedirs('db', exist_ok=True)
             
-            with open('produtos.json', 'w', encoding='utf-8') as f:
+            with open('db/produtos.json', 'w', encoding='utf-8') as f:
                 json.dump([produto.to_dict() for produto in self.produtos], f, indent=2, ensure_ascii=False)
-            with open('movimentos.json', 'w', encoding='utf-8') as f:
+            with open('db/movimentos.json', 'w', encoding='utf-8') as f:
                 json.dump([movimento.to_dict() for movimento in self.movimentos], f, indent=2, ensure_ascii=False)
         except Exception as e:
             print(f"Erro ao salvar dados: {e}")

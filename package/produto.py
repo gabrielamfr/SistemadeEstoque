@@ -38,15 +38,15 @@ class Produto:
     @classmethod
     def from_dict(cls, data: dict):
         produto = cls(
-            id=data['id'],
-            nome=data['nome'],
-            descricao=data['descricao'],
-            preco=data['preco'],
-            estoque_atual=data['estoque_atual'],
-            estoque_minimo=data['estoque_minimo'],
-            categoria=data.get('categoria', 'Geral')
+            id=int(data.get('id', 0)),
+            nome=str(data.get('nome', 'Sem Nome')),
+            descricao=str(data.get('descricao', '')),
+            preco=float(data.get('preco', 0.0)),
+            estoque_atual=int(data.get('estoque_atual', 0)),
+            estoque_minimo=int(data.get('estoque_minimo', 0)),
+            categoria=str(data.get('categoria', 'Geral'))
         )
-        produto.ativo = data.get('ativo', True)
+        produto.ativo = bool(data.get('ativo', True))
         return produto
     
     def __str__(self):
